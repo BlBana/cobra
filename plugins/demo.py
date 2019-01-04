@@ -36,6 +36,7 @@ class CobraScan(object):
 
         # 漏洞规则
         self.match_mode = "plugins-ast"
+        self.match_block = "in-function-down"
         self.match = "setAttribute|getWriter|write|append"
         self.java_rule = ['setAttribute:javax.servlet.http.HttpServletRequest',
                           'getWriter:javax.servlet.http.HttpServletResponse',

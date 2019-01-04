@@ -471,7 +471,6 @@ class Core(object):
 
         self.rule_match = single_rule['match']
         self.rule_match_mode = single_rule['match-mode']
-        self.match_block = single_rule['match-block']
         self.rule_match2 = single_rule['match2']
         self.rule_match2_block = single_rule['match2-block']
         self.java_rules = single_rule['java-rules']
@@ -479,6 +478,8 @@ class Core(object):
         self.repair_block = single_rule['repair-block']
         self.cvi = single_rule['id']
         self.file = single_rule['file']
+        if self.rule_match_mode == const.mm_plugins_ast or self.rule_match_mode == const.mm_plugins:
+            self.match_block = single_rule['match-block']
 
         self.project_name = project_name
         self.white_list = white_list

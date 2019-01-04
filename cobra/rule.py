@@ -269,6 +269,7 @@ class Rule(object):
                 'match-mode': 'regex-only-match',
                 'match2': None,
                 'match2-block': None,
+                'match-block': 7,
                 'java-rules': [],
                 'repair': None,
                 'repair-block': None,
